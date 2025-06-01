@@ -69,7 +69,7 @@ const Portfolio = () => {
 							experience.
 						</h2>
 						<div className="grid relative">
-							{EXP_LIST.reverse().map((experience) => (
+							{[...EXP_LIST].reverse().map((experience) => (
 								<div key={experience.id}>
 									<a
 										href={experience.experience_link}
@@ -98,7 +98,7 @@ const Portfolio = () => {
 								projects.
 							</h2>
 							<div className="grid relative">
-								{PROJ_LIST.reverse().map((project) => (
+								{[...PROJ_LIST].reverse().map((project) => (
 									<div key={project.id}>
 										<a
 											href={project.project_link}
