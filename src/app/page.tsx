@@ -2,24 +2,7 @@
 
 import { useState } from "react";
 
-const Portfolio = () => {
-	const [activeSection, setActiveSection] = useState("");
-
-	const handleLinkClick = (section) => {
-		setActiveSection(section);
-	};
-
-	const handleBack = () => {
-		setActiveSection("");
-	};
-
-	const NAV_LIST = [
-		{ id: "about", text: "about" },
-		{ id: "experience", text: "experience" },
-		{ id: "contact", text: "contact" },
-	];
-
-	const EXP_LIST = [
+const EXP_LIST = [
 		{
 			id: 0,
 			experience_name: "nj fbla slc",
@@ -44,6 +27,23 @@ const Portfolio = () => {
 			project_date: "➸ jun '24",
 			project_link: "https://github.com/jpnguyennn/rutgers-vsa-frontend",
 		},
+	];
+
+const Portfolio = () => {
+	const [activeSection, setActiveSection] = useState("");
+
+	const handleLinkClick = (section) => {
+		setActiveSection(section);
+	};
+
+	const handleBack = () => {
+		setActiveSection("");
+	};
+
+	const NAV_LIST = [
+		{ id: "about", text: "about" },
+		{ id: "experience", text: "experience" },
+		{ id: "contact", text: "contact" },
 	];
 
 	const content = () => {
