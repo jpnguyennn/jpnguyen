@@ -32,7 +32,7 @@ const EXP_LIST = [
 const Portfolio = () => {
 	const [activeSection, setActiveSection] = useState("");
 
-	const handleLinkClick = (section) => {
+	const handleLinkClick = (section: any) => {
 		setActiveSection(section);
 	};
 
