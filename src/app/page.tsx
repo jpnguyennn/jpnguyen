@@ -101,7 +101,6 @@ const Portfolio = () => {
 								{PROJ_LIST.reverse().map((project) => (
 									<div key={project.id}>
 										<a
-											key={project.id}
 											href={project.project_link}
 											target="_blank"
 										>
