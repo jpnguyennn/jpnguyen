@@ -70,52 +70,58 @@ const Portfolio = () => {
 						</h2>
 						<div className="grid relative">
 							{EXP_LIST.reverse().map((experience) => (
-								<a
-									key={experience.id}
-									href={experience.experience_link}
-									target="_blank"
-								>
-									<div className="relative border-l-white border-l-2">
-										<div className="absolute left-[-9px] top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rounded-full border-2 border-white shadow" />
-										<div className="p-6 ease-[cubic-bezier(0.42,0,0.58,1)] hover:scale-[0.98]">
-											<p className="text-sm">
-												{experience.experience_date}
-											</p>
-											<h1 className="text-4xl font-titles mb-2">
-												{experience.experience_name}
-											</h1>
-											<p className="text-sm">
-												[ {experience.experience_desc} ]
-											</p>
-										</div>
-									</div>
-								</a>
-							))}
-							<h2 className="text-4xl font-titles bg-gradient-to-r from-blue-400 to-green-600 bg-clip-text text-transparent my-5">
-								projects.
-							</h2>
-							<div className="grid relative">
-								{PROJ_LIST.reverse().map((project) => (
+								<div key={experience.id}>
 									<a
-                    key={project.id}
-										href={project.project_link}
+										href={experience.experience_link}
 										target="_blank"
 									>
 										<div className="relative border-l-white border-l-2">
 											<div className="absolute left-[-9px] top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rounded-full border-2 border-white shadow" />
 											<div className="p-6 ease-[cubic-bezier(0.42,0,0.58,1)] hover:scale-[0.98]">
 												<p className="text-sm">
-													{project.project_date}
+													{experience.experience_date}
 												</p>
 												<h1 className="text-4xl font-titles mb-2">
-													{project.project_name}
+													{experience.experience_name}
 												</h1>
 												<p className="text-sm">
-													[ {project.project_desc} ]
+													[{" "}
+													{experience.experience_desc}{" "}
+													]
 												</p>
 											</div>
 										</div>
 									</a>
+								</div>
+							))}
+							<h2 className="text-4xl font-titles bg-gradient-to-r from-blue-400 to-green-600 bg-clip-text text-transparent my-5">
+								projects.
+							</h2>
+							<div className="grid relative">
+								{PROJ_LIST.reverse().map((project) => (
+									<div key={project.id}>
+										<a
+											key={project.id}
+											href={project.project_link}
+											target="_blank"
+										>
+											<div className="relative border-l-white border-l-2">
+												<div className="absolute left-[-9px] top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rounded-full border-2 border-white shadow" />
+												<div className="p-6 ease-[cubic-bezier(0.42,0,0.58,1)] hover:scale-[0.98]">
+													<p className="text-sm">
+														{project.project_date}
+													</p>
+													<h1 className="text-4xl font-titles mb-2">
+														{project.project_name}
+													</h1>
+													<p className="text-sm">
+														[ {project.project_desc}{" "}
+														]
+													</p>
+												</div>
+											</div>
+										</a>
+									</div>
 								))}
 							</div>
 						</div>
